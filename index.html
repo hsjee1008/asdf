@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>안녕! 반가워요.</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <!-- Optional -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>/* For Google fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+        
+        body {
+          background: rgb(0, 0, 0);
+          
+        }
+
+        body::-webkit-scrollbar{
+          display: none;
+        }
+        
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Noto Sans KR', sans-serif;
+        }
+        
+        .whats-this {
+          width: 100%;
+          height: 100vh;
+          padding: 10px;
+        }
+        
+        .container {
+          height: 4000px;
+        }
+        
+        .animate {
+          position: sticky;
+          top: 45vh;
+          opacity: 0;
+          font-size: 40px;
+          width: 100%;
+          height: 90px;
+          text-align: center;
+          color:white;
+        }
+        
+        .trigger {
+          width: 100%;
+          height: 10px;
+          margin-bottom: 900px;
+        }
+
+        #font{
+            font-family: 'Noto Sans KR', sans-serif;
+            color:rgb(128, 128, 128);
+        }
+        * {
+          box-sizing: border-box;
+        }
+
+        #font1{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 20px;
+            color:  rgb(59, 59, 59);
+        }
+
+        body {
+          margin: 0;
+          font-family: Arial;
+          font-size: 17px;
+        }
+
+        #myVideo {
+          position: fixed;
+          right: 0;
+          bottom: 0;
+          min-width: 100%; 
+          min-height: 100%;
+        }
+
+        .content {
+          position  : fixed;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.5);
+          color: black;
+          width: 100%;
+          padding: 20px;
+        }
+
+        #myBtn {
+          width: 200px;
+          font-size: 18px;
+          padding: 10px;
+          border: none;
+          background: #000;
+          color: #fff;
+          cursor: pointer;
+        }
+
+
+
+        #myBtn:hover {
+          background: #ddd;
+          color: black;
+        }
+        @keyframes letter_space {
+          from {
+            letter-spacing: 10px;
+          }
+
+          to {
+            letter-spacing: default;
+          }
+        }
+
+
+        @keyframes letter_space_wide {
+          from {
+            letter-spacing: default;
+          }
+
+          to {
+            letter-spacing: 2px;
+          }
+        }
+
+
+        .hello{
+          animation-duration: 1s;
+          animation-name: letter_space;
+          text-decoration: none;
+        }
+        .click:hover{
+
+          letter-spacing: 2px;
+          transition-duration: 0.3s;
+        }
+
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+      <source src="background vide.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+      <div class="container">
+        <h1 class="animate animate_1" style="line-height:90%;"><a class="hello" id="font">안녕! 반가워요.</a><br><a class="hello" id="font1">f11을 누르고 이용해주세요 :)</a></h1>
+        <div class="trigger trigger_1"></div>
+
+        <h1 class="animate animate_2"><a id="font">저희는 미래정책포럼</a><div id="airconditioners" data-aos="fade-right"><a style="font-family: 'Noto Sans KR', sans-serif; color:rgb(132, 162, 187);"> AirConditioners</a></div><a id="font">예요.</a></h1>
+        <div class="trigger trigger_2"></div>
+        <h1 class="animate animate_3"><a id="font">Delta HAFS 데모 버전이에요.</a></h1>
+        <div class="trigger trigger_3"></div>
+        <h1 class="animate animate_4"><a href="page1.html" class="click" id="font" style="text-decoration:underline 2px; color : rgb(132, 162, 187);">가보죠!</a></h1>
+        <div class="trigger trigger_4"></div>
+        
+      </div>
+</body>
+
+<script>
+  AOS.init();
+</script>
+
+<script>
+var controller = new ScrollMagic.Controller();
+var animateElem = [".animate_1", ".animate_2", ".animate_3", ".animate_4"];
+var triggerElem = [".trigger_1", ".trigger_2", ".trigger_3", ".trigger_4"];
+
+for (var i = 0; i < animateElem.length; i++) {
+  var currentAnimateElem = animateElem[i];
+  var currentTriggerElem = triggerElem[i];
+
+  var timeline = new TimelineMax();
+
+  var tween_move = TweenMax.fromTo(
+    currentAnimateElem,
+    1,
+    {
+      ease: SlowMo.ease.config(0.7, 0.7, false),
+      y: 50
+    },
+    {
+      ease: SlowMo.ease.config(0.7, 0.7, false),
+      y: -50
+    }
+  );
+
+  var tween_opacity = new TimelineMax();
+  tween_opacity
+    .to(currentAnimateElem, 0.3, {
+      ease: Linear.easeNone,
+      opacity: 1
+    })
+    .to(
+      currentAnimateElem,
+      0.3,
+      {
+        ease: Linear.easeNone,
+        opacity: 0
+      },
+      "+=0.4"
+    );
+
+  timeline.add(tween_move, 0).add(tween_opacity, 0);
+
+  var scene_main = new ScrollMagic.Scene({
+    triggerElement: currentTriggerElem,
+    duration: "900px"
+  })
+    .setTween(timeline)
+    .addTo(controller);
+}
+</script>
+</html>
